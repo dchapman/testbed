@@ -1,0 +1,67 @@
+/* stylelint-disable */
+
+// font defaults
+$font-sans: "Avenir", "GE Inspira Sans", Helvetica, sans-serif;
+$font-size-base: 10px;
+$font-size: 1.6rem;
+$line-height: 1.5;
+
+// easing curves
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-out-quint: cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-in-out-quart: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+$ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$colors: (
+  white: #ffffff,
+  athens: #f2f2f3,
+  gallery: #ebebeb,
+  mishka: #e0e0e4,
+  dumbo: #898890,
+  storm: #67666d,
+  panther: #343437,
+  black: #000000,
+);
+
+// weights
+$font-weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  heavy: 800,
+  black: 900
+);
+
+// z-index layers
+$layers: (
+  background,
+  content,
+  panel,
+  dropdown,
+  subnav,
+  mobile-nav,
+  header,
+  overlay,
+  modal
+);
+
+// project-specific
+$subtle-shadow: 0 0 0.4rem rgba(137,136,144,0.09), 0 0.1rem 0.2rem rgba(137,136,144, 0.4), 0 0.2rem 0.4rem rgba(137,136,144, 0.12);
+
+$m-header-height: 6.6rem;
+$header-height: 10.8rem;
+
+$m-logo-size: 4.4rem;
+$logo-size: 7.2rem;

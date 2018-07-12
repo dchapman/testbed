@@ -1,0 +1,51 @@
+body {
+  font-family: 'Barlow Semi Condensed', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.125em;
+  font-weight: 700;
+  min-height: 100vh;
+  color: #57585c;
+  color: var(--color-text);
+  background-color: #fff;
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  --color-text: #fff;
+  --color-bg: #201f21;
+  --color-link: #fff;
+  --color-link-hover: #7b7b7b;
+  --color-info: #7b7b7b;
+}
+
+.slides {
+  margin: 0 11rem 0 0;
+  width: calc(100vw - 11rem - 4rem);
+  display: flex;
+  justify-content: flex-end;
+
+  --gap-horizontal: 10px;
+  --gap-vertical: 5px;
+  --time-anim: 2s;
+  --delay-anim: 0s;
+  --blend-mode-1: none;
+  --blend-mode-2: none;
+  --blend-mode-3: none;
+  --blend-mode-4: none;
+  --blend-mode-5: overlay;
+  --blend-color-1: transparent;
+  --blend-color-2: transparent;
+  --blend-color-3: transparent;
+  --blend-color-4: transparent;
+  --blend-color-5: #af4949;
+}

@@ -1,0 +1,11 @@
+query {
+  page: getGlitch {
+    slides {
+      heading
+      image {
+        s3Key
+      }
+      text
+    }
+  }
+}

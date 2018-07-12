@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1rem;
+
+  &.is-locked {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @include for-desktop-up {
+    &.is-locked {
+      position: relative;
+      overflow: auto;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  flex-basis: 100%;
+  flex-grow: 2;
+  min-height: 19.2rem;
+}

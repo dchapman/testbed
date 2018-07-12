@@ -1,0 +1,61 @@
+@lost gutter 3.6rem;
+@lost flexbox flex;
+@lost cycle auto;
+
+%container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: 122rem;
+  z-index: -z(content);
+
+  @include for-tablet-portrait-up {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include for-big-desktop-up {
+    max-width: 148rem;
+  }
+}
+
+%desktop-container {
+  @include for-tablet-portrait-up {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-width: 122rem;
+    z-index: -z(content);
+  }
+
+  @include for-big-desktop-up {
+    max-width: 148rem;
+  }
+}
+
+%flex-container {
+  @extend %container;
+
+  display: flex;
+}
+
+%wrap {
+  position: relative;
+
+  @include for-tablet-landscape-up {
+    lost-column: 5/6;
+    lost-offset: 1/12;
+  }
+}
+
+.container {
+  @extend %basic-block;
+
+  &__inner {
+    @extend %container;
+  }
+}
