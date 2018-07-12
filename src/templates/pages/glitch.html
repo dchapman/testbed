@@ -2,10 +2,17 @@
 
 {% block content %}
 <div class="content">
-  <div class="slides">
-    {% for slide in page.slides %}
-
-    {% endfor %}
-  </div>
+  <glitch inline-template>
+    <div class="slides">
+      {% for slide in page.slides %}
+      <slide inline-template>
+        <div class="slide">
+          <div class="slide__image glitch" style="background-image: url({{ slide.image.s3Key | image }});"></div>
+          <h2 class="slide__heading">{{ slide.heading }}</h2>
+        </div>
+      </slide>
+      {% endfor %}
+    </div>
+  </glitch>
 </div>
 {% endblock %}

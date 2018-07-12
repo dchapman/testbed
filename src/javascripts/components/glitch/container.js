@@ -1,15 +1,23 @@
+import Slide from './slide';
+
 export default {
-  name: 'glitch-container',
+  name: 'glitch',
 
   data() {
-
+    return {
+      test: null
+    }
   },
 
   mounted() {
-
+    console.log('hi');
   },
 
   methods: {
 
+  },
+
+  components: {
+    Slide
   }
 };
