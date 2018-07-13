@@ -1,18 +1,28 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-<div class="content">
-  <glitch inline-template>
+<glitch inline-template glitch-amount="5" glitch-duration="1800">
+  <div class="content">
     <div class="slides">
       {% for slide in page.slides %}
-      <slide inline-template>
-        <div class="slide">
-          <div class="slide__image glitch" style="background-image: url({{ slide.image.s3Key | image }});"></div>
-          <h2 class="slide__heading">{{ slide.heading }}</h2>
+      <slide inline-template :index="{{ loop.index }}" ref="{{ loop.index }}">
+        <div class="slide" v-bind:class="{'is-current': isCurrent, 'is-animating': isAnimating}">
+          <div class="slide__image" style="background-image: url({{ slide.image.s3Key | image }});"></div>
+
+          <div class="slide__content">
+            <h2 class="slide__heading">{{ slide.heading }}</h2>
+            <p class="slide__text">{{ slide.text }}</p>
+          </div>
         </div>
       </slide>
       {% endfor %}
     </div>
-  </glitch>
-</div>
+
+    <nav class="slide-nav">
+      <button class="slide-nav__button" @click="navigate('prev')"><span>Previous</span></button>
+      <button class="slide-nav__button" @click="navigate('next')"><span>Next</span></button>
+    </nav>
+  </div>
+</glitch>
 {% endblock %}
+

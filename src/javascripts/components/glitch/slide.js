@@ -5,42 +5,44 @@ export default {
 
   data() {
     return {
-      glitchImages: []
+      isAnimating: false,
+      glitchImages: [],
+      imageDom: null,
+      imageBackground: null
     }
   },
 
-  props: ['glitchAmount'],
+  props: ['index'],
 
   computed: {
-    image: function() {
-      return this.$el.querySelector('.slide__image');
-    },
-    imageBackground: function() {
-      return this.image.style.backgroundImage;
+    isCurrent: function() {
+      return this.index === this.$parent.current;
     }
   },
 
   mounted() {
-    console.log(imagesLoaded);
-
     this.layout();
   },
 
   methods: {
     layout() {
-      for (i=0; i<this.glitchAmount; i++) {
+      this.imageDom = this.$el.querySelector('.slide__image');
+      this.imageBackground = this.imageDom.style.backgroundImage;
+
+      for (let i=0; i<this.$parent.glitchAmount; i++) {
         let image =  document.createElement("div");
 
-        image.classList.add("slide__image");
+        image.classList.add("slide__glitch");
         image.style.backgroundImage = this.imageBackground;
 
-        this.glitchImage.appendChild(image);
+        this.imageDom.appendChild(image);
         this.glitchImages.push(image);
       }
     },
 
-    changeBgImage(image, pos = 0, delay = 0) {
-      setTimeout(() => this.glitchImages[pos].style.backgroundImage = image, delay);
+    setBgImage(image, pos = 0, delay = 0) {
+      console.log(delay);
+      setTimeout(() => {this.glitchImages[pos].style.backgroundImage = image}, delay);
     }
   }
 };
