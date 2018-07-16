@@ -4,6 +4,7 @@ import Resize from 'vue-resize-directive';
 import Vue from 'vue';
 
 import Glitch from './components/glitch/container';
+import Proximity from './components/proximity';
 
 import Imageloaded from './directives/imageloaded';
 
@@ -15,7 +16,8 @@ export default new Vue({
     objectFitImages();
   },
   components: {
-    Glitch
+    Glitch,
+    Proximity
   },
   directives: {
     Imageloaded,

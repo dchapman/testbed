@@ -28,8 +28,6 @@ export default {
         for (let i = count-1; i >= 0; --i) {
           let delay = (duration/(count+5)*(count-i-1) + duration/(count+1))*10;
 
-          console.log(delay);
-
           from.setBgImage(to.imageBackground, i, delay);
         }
 

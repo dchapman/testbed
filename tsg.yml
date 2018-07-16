@@ -24,3 +24,7 @@ routes:
     path: /glitch
     template: pages/glitch.html
     context: data/glitch.graphql
+
+  proximity:
+    path: /proximity
+    template: pages/proximity.html

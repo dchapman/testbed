@@ -91,6 +91,7 @@
     "core-js": "^2.4.1",
     "dayjs": "^1.6.0",
     "get-parameter": "^1.0.8",
+    "gsap": "^2.0.1",
     "imagesloaded": "^4.1.4",
     "lodash": "^4.17.4",
     "object-fit-images": "^2.3.1",

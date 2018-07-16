@@ -1,13 +1,13 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-<glitch inline-template glitch-amount="5" glitch-duration="1800">
+<glitch inline-template glitch-amount="8" glitch-duration="800">
   <div class="content">
     <div class="slides">
       {% for slide in page.slides %}
       <slide inline-template :index="{{ loop.index }}" ref="{{ loop.index }}">
         <div class="slide" v-bind:class="{'is-current': isCurrent, 'is-animating': isAnimating}">
-          <div class="slide__image" style="background-image: url({{ slide.image.s3Key | image }});"></div>
+          <div class="slide__image" style="background-image: url({{ slide.image.s3Key | image }});" v-imageloaded></div>
 
           <div class="slide__content">
             <h2 class="slide__heading">{{ slide.heading }}</h2>

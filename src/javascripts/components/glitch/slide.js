@@ -1,4 +1,4 @@
-import imagesLoaded from 'imagesloaded';
+import imageloaded from '../../directives/imageloaded';
 
 export default {
   name: 'slide',
@@ -41,8 +41,11 @@ export default {
     },
 
     setBgImage(image, pos = 0, delay = 0) {
-      console.log(delay);
       setTimeout(() => {this.glitchImages[pos].style.backgroundImage = image}, delay);
     }
+  },
+
+  directives: {
+    imageloaded
   }
 };
