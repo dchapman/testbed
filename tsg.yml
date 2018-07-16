@@ -29,3 +29,7 @@ routes:
     path: /proximity
     template: pages/proximity.html
     context: data/proximity.graphql
+
+  gsap:
+    path: /gsap
+    template: pages/gsap.html
