@@ -1,5 +1,29 @@
 {% extends "layouts/default.html" %}
 
-{% block content %}
+{% from "macros/image.html" import image %}
 
+{% block content %}
+<div class="proximity">
+  <div class="proximity__background">
+    {{ image(page.background.s3Key) }}
+  </div>
+
+  <proximity inline-template>
+    <nav class="menu">
+      <div class="menu__wrap">
+        <button class="menu__button">
+          <svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+        </button>
+      </div>
+
+      <div class="menu__inner">
+        <a href="#" class="menu__item">Our Story</a>
+        <a href="#" class="menu__item">Products</a>
+        <a href="#" class="menu__item">Clients</a>
+        <a href="#" class="menu__item">Press Kit</a>
+        <a href="#" class="menu__item">Contact</a>
+      </div>
+    </nav>
+  </proximity>
+</div>
 {% endblock %}

@@ -1,0 +1,15 @@
+.proximity {
+  @extend %basic-block;
+
+  width: 100vw;
+  height: 100vh;
+
+  &__background {
+    @extend %absolute-fill;
+    @extend %background;
+
+    img {
+      @extend %cover-fill-image;
+    }
+  }
+}

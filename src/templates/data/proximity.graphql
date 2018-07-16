@@ -1,0 +1,7 @@
+query {
+  page: getProximity {
+    background {
+      s3Key
+    }
+  }
+}
