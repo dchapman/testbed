@@ -1,32 +1,46 @@
-.gsap {
-  &__box {
-    background-color: #88ce02;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.body--gsap {
+  .banner {
+    position: relative;
+    white-space:nowrap;
   }
 
-  &__subbox {
-    position: absolute;
-    background-color: #70a40b;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 25px;
-    height: 75px;
-    z-index: 2;
+  .panel {
+    width: 300px;
+    height: 250px;
+    display: inline-block;
+    background: black;
+    position: relative;
+    overflow:hidden;
+  }
 
-    &--small {
-      background-color: #577a14;
-      height: 50px;
-      bottom: 0;
-      right: 0;
-      left: auto;
-      z-index: 3;
-    }
+  .bg {
+    position: absolute;
+    width: 300px;
+    height: 178px;
+    background-color: #e644dc;
+  }
+
+  .logo {
+    position: absolute;
+    left: 111px;
+    top: 147px;
+    width:78px;
+    height: 80px;
+    background-color: red;
+  }
+
+  .text {
+    position: absolute;
+    font-size: 32px;
+    text-align: center;
+    width: 300px;
+    top: 50px;
+    color: white;
+    font-weight: 300;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .text span {
+    display: inline-block;
   }
 }

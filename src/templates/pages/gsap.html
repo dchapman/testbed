@@ -2,14 +2,54 @@
 
 {% from "macros/image.html" import image %}
 
+{% block body_class %}body--gsap{% endblock %}
+
 {% block content %}
   <gsap inline-template>
-    <div class="content">
-      <div class="gsap">
-        <div class="gsap__box">
-          <div class="gsap__subbox"></div>
-          <div class="gsap__subbox gsap__subbox--small"></div>
+    <div class="banner">
+      <div class="panel panel1">
+        <div class="bg"></div>
+
+        <div class="text">
+          <span>Code</span>
+          <span>animations</span>
+          <br>
+          <span>like</span>
+          <span>a</span>
+          <span>pro</span>
         </div>
+
+        <div class="logo"></div>
+      </div>
+
+      <div class="panel panel2">
+        <div class="bg"></div>
+
+        <div class="text">
+          <span>Code</span>
+          <span>animations</span>
+          <br>
+          <span>like</span>
+          <span>a</span>
+          <span>pro</span>
+        </div>
+
+        <div class="logo"></div>
+      </div>
+
+      <div class="panel panel3">
+        <div class="bg"></div>
+
+        <div class="text">
+          <span>Code</span>
+          <span>animations</span>
+          <br>
+          <span>like</span>
+          <span>a</span>
+          <span>pro</span>
+        </div>
+
+        <div class="logo"></div>
       </div>
     </div>
   </gsap>

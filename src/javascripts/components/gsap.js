@@ -1,44 +1,35 @@
 import {TweenLite, CSSPlugin, EasePack} from "gsap/TweenMax";
+import TimelineMax from "gsap/TimelineMax";
 
 export default {
   name: 'gsap',
 
   data() {
     return {
-      box: null
+      master: new TimelineMax()
     }
   },
 
   mounted() {
-    this.box = this.$el.querySelector('.gsap__box');
-
-    this.iHateTomatoes();
+    this.master
+      .add(this.createPanel('1', 50))
+      .add(this.createPanel('2', -50))
+      .add(this.createPanel('3', 50));
   },
 
   methods: {
-    iHateTomatoes() {
-      /*TweenLite.to(this.box, 0.7, {left: 0, x: 0});*/
-      /*TweenLite.from(this.box, 2, {x: '-=200px', autoAlpha: 0});*/
+    createPanel(id, startY = 50) {
+      var timeline = new TimelineMax();
 
-      /*TweenLite.set(this.box, {x: '-=200px', scale: 0.3});
-      TweenLite.set(this.box, {x: '+=100px', scale: 0.6, delay: 1});
-      TweenLite.set(this.box, {x: '-50%', scale: 1, delay: 2});*/
+      timeline
+        .from(`.panel${id} .bg`, 0.4, {scale:0, ease:Power1.easeInOut}, "in1")
+        .from(`.panel${id} .bg`, 0.3, {rotation:90, ease:Power1.easeInOut}, "in1")
+        .staggerFrom(`.panel${id} .text span`, 1.1, {y: startY, opacity:0, ease:Elastic.easeOut}, 0.06)
+        .addLabel(`out${id}`, "+=1")
+        .staggerTo(`.panel${id} .text span`, 0.3, {opacity:0, y:50, ease:Power1.easeIn}, -0.06, "out1")
+        .to(`.panel${id} .bg`, 0.4, {scale:0, rotation:-90, ease:Power1.easeInOut});
 
-      /*TweenLite.fromTo(this.box, 2, {x: '-=200px'}, {x: 150, ease: Power4.easeInOut});*/
-
-      /*TweenLite.to(this.box, 0.4, {top: '100%', y: '-100%', ease:Bounce.easeOut, delay: 2});
-      TweenLite.to(this.box, 0.7, {x: '-=200px', y: '-100%', ease:Back.easeInOut, delay: 3});
-      TweenLite.to(this.box, 0.8, {x: '-=200px', y: '-100%', ease:Back.easeInOut, delay: 4.2});
-      TweenLite.to(this.box, 2.5, {top: '50%', y: '-50%', ease:Power0.easeNone, delay: 5});
-      TweenLite.to(this.box, 2.5, {x: '+=400px', ease:Elastic.easeInOut, delay: 7.7});
-      TweenLite.to(this.box, 2.5, {x: '-=400px', rotation: -720, ease: SlowMo.ease.config(0.1, 0.7, false), delay: 10.4});*/
-
-      TweenLite.fromTo(this.box, 2, {x: '-=200px'}, {x: 150, ease: Power4.easeInOut, onStart: this.onStart});
-    },
-
-    onStart() {
-      console.log('start');
-      // onUpdate, onComplete also available
+      return timeline;
     }
   }
 };
