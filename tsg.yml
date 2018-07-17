@@ -33,3 +33,7 @@ routes:
   gsap:
     path: /gsap
     template: pages/gsap.html
+
+  osmosis:
+    path: /osmosis
+    template: pages/osmosis.html
