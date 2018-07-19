@@ -37,3 +37,7 @@ routes:
   osmosis:
     path: /osmosis
     template: pages/osmosis.html
+
+  cursor:
+    path: /cursor
+    template: pages/cursor.html

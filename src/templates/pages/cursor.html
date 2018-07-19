@@ -1,0 +1,16 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image.html" import image %}
+
+{% block body_class %}body--cursor{% endblock %}
+
+{% block content %}
+<div class="content">
+  <followcursor inline-template>
+    <div class="circles">
+      <div class="circle"></div>
+      <div class="circle--small"></div>
+    </div>
+  </followcursor>
+</div>
+{% endblock %}

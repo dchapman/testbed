@@ -7,6 +7,8 @@ import Glitch from './components/glitch/container';
 import Proximity from './components/proximity';
 import Gsap from './components/gsap';
 import Osmosis from './components/osmosis';
+import Followcursor from './components/cursor/cursor';
+import Tout from './components/cursor/tout';
 
 import Imageloaded from './directives/imageloaded';
 
@@ -21,7 +23,9 @@ export default new Vue({
     Glitch,
     Proximity,
     Gsap,
-    Osmosis
+    Osmosis,
+    Followcursor,
+    Tout
   },
   directives: {
     Imageloaded,
