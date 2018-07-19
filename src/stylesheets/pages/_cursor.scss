@@ -4,11 +4,12 @@
   height: 20px;
   top: 0;
   left: 0;
-  background: #cb4b16;
+  background: #f70a53;
   border-radius: 80%;
   backface-visibility: hidden;
   pointer-events: none;
   opacity: 0.5;
+  z-index: 9999;
 }
 
 .circle--small {
@@ -21,4 +22,14 @@
 
 .body--cursor {
   cursor: none;
+  background-color: #201f21;
+}
+
+.tout {
+  position: relative;
+  top: 200px;
+  left: 200px;
+  width: 300px;
+  height: 540px;
+  background: #333;
 }

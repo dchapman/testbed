@@ -6,7 +6,7 @@ export default {
 
   data() {
     return {
-      master: new TimelineMax()
+
     }
   },
 
@@ -16,8 +16,8 @@ export default {
 
     window.addEventListener('pointermove', (e) => {
 
-      TweenMax.to(circle, 0.3, { x: e.pageX - 10, y: e.pageY - 10 });
-      TweenMax.to(circleSmall, 0.5, { x: e.pageX - 2, y: e.pageY - 2 });
+      TweenMax.to(circle, 0.5, { x: e.pageX - 10, y: e.pageY - 10 });
+      TweenMax.to(circleSmall, 0.3, { x: e.pageX - 2, y: e.pageY - 2 });
     });
   },
 
