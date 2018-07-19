@@ -96,6 +96,7 @@
     "lodash": "^4.17.4",
     "object-fit-images": "^2.3.1",
     "path": "^0.12.7",
+    "scrollmagic": "^2.0.5",
     "slugg": "^1.2.1",
     "vue": "^2.4.4",
     "vue-loader": "^13.0.4",
